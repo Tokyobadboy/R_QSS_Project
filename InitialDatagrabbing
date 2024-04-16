@@ -1,0 +1,9 @@
+library(RedditExtractoR)
+library(dplyr)
+DF2 = find_thread_urls(
+  keywords = "Health",
+  sort_by = "top",
+  subreddit = "Canada",
+  period = "year")
+
+DF1 = filter(DF, grepl('health|doctor', title))
